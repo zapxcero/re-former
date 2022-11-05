@@ -1,4 +1,21 @@
-<form action="/users" method="post" accept-charset="utf-8">
+<%= form_tag("/users", method:"post") do %>
+  <div>
+    <%= label_tag(:username, "Username: ")%>
+    <%= text_field_tag(:username)%>
+  </div>
+  <div>
+    <%= label_tag(:email, "Email: ")%>
+    <%= email_field_tag(:email)%>
+  </div>
+  <div>
+    <%= label_tag(:password, "Password: ")%>
+    <%= password_field_tag(:password)%>
+  </div>
+  <div>
+    <%= submit_tag("Submit")%>
+  </div>
+<% end %>
+<%# <form action="/users" method="post" accept-charset="utf-8">
   <div>
     <label for="username">Username:</label>
     <input type="text" name="user[username]" id="username">
@@ -13,4 +30,4 @@
   </div>
   <div>
     <button type="submit">Submit</button></div>
-</form>
+</form> %>
